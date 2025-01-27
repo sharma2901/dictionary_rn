@@ -1,23 +1,23 @@
 {
   "expo": {
-    "name": "dictionary_rn",
-    "slug": "dictionary_rn",
+    "name": "dictionary",
+    "slug": "dictionary",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "dictionary",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.dictionary-rn"
+      "bundleIdentifier": "com.suryakant.dictionary"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.dictionary_rn"
+      "package": "com.suryakant.dictionary"
     },
     "web": {
       "bundler": "metro",
