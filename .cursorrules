@@ -6,6 +6,12 @@ Code Style and Structure:
 - Use functional components and hooks over class components.
 - Ensure components are modular, reusable, and maintainable.
 - Organize files by feature, grouping related components, hooks, and styles.
+- Use Nativewind for styling.
+- Plan well before writing code.
+- List all the packages which need to be installed.
+- Clearly mention if newly installed packages needs to be linked and steps to perform that.
+- Give step by step clear instructions for the changes to be made.
+- Use Nativewind docs to learn more about it (https://www.nativewind.dev/).
 
 Naming Conventions:
 
