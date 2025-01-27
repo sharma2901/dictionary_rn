@@ -8,7 +8,7 @@ import { useMemo } from "react";
 // Convert inches to pixels (assuming 160dpi as base)
 const INCH_TO_PX = 160;
 const SYMBOL_SIZE = INCH_TO_PX * 0.3;
-const OPACITY = 0.3; // Translucency level
+const OPACITY = 0.25; // Translucency level
 const GRID_GAP = SYMBOL_SIZE * 1.5; // Space between symbols
 
 interface Symbol {
@@ -48,7 +48,7 @@ const Background: React.FC = () => {
           // Center the symbol in its grid cell with slight random offset
           x: col * xGap + (xGap - SYMBOL_SIZE) / 2 + xOffset,
           y: row * yGap + (yGap - SYMBOL_SIZE) / 2 + yOffset,
-          rotation: Math.random() * 360,
+          rotation: Math.random() * 180,
           size: SYMBOL_SIZE * (0.5 + Math.random() * 0.7), // Random size >= 0.5x and < 1.2x
         });
       }
@@ -68,7 +68,7 @@ const Background: React.FC = () => {
     switch (symbol.type) {
       case "swastika":
         return (
-          <Swastika key={`swastika-${index}`} fillColor="#F7B239" {...props} />
+          <Swastika key={`swastika-${index}`} fillColor="#b97808" {...props} />
         );
       case "om":
         return <OM key={`om-${index}`} fillColor="#F95428" {...props} />;
