@@ -44,6 +44,14 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "fonts": [
+      {
+        "asset": "assets/fonts/NotoSans.ttf"
+      },
+      {
+        "asset": "assets/fonts/NotoSansItalic.ttf"
+      }
+    ]
   }
 }
