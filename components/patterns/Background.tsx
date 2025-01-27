@@ -37,7 +37,7 @@ const Background: React.FC = () => {
     for (let row = 0; row < rows; row++) {
       for (let col = 0; col < cols; col++) {
         // Add some randomness to position within the grid cell
-        const randomOffset = SYMBOL_SIZE * 0.5; // 30% of symbol size
+        const randomOffset = SYMBOL_SIZE * 0.3; // 30% of symbol size
         const xOffset = (Math.random() - 0.5) * randomOffset;
         const yOffset = (Math.random() - 0.5) * randomOffset;
 
@@ -49,7 +49,7 @@ const Background: React.FC = () => {
           x: col * xGap + (xGap - SYMBOL_SIZE) / 2 + xOffset,
           y: row * yGap + (yGap - SYMBOL_SIZE) / 2 + yOffset,
           rotation: Math.random() * 360,
-          size: SYMBOL_SIZE * (0.5 + Math.random() * 0.7), // Random size between 0.5x and 1.2x
+          size: SYMBOL_SIZE * (0.5 + Math.random() * 0.7), // Random size >= 0.5x and < 1.2x
         });
       }
     }
@@ -67,11 +67,13 @@ const Background: React.FC = () => {
 
     switch (symbol.type) {
       case "swastika":
-        return <Swastika key={`swastika-${index}`} {...props} />;
+        return (
+          <Swastika key={`swastika-${index}`} fillColor="#F7B239" {...props} />
+        );
       case "om":
-        return <OM key={`om-${index}`} {...props} />;
+        return <OM key={`om-${index}`} fillColor="#F95428" {...props} />;
       case "hindi":
-        return <Hindi key={`hindi-${index}`} {...props} />;
+        return <Hindi key={`hindi-${index}`} fillColor="#F95428" {...props} />;
     }
   };
 
