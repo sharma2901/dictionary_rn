@@ -7,7 +7,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { useColorScheme } from "react-native";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { useCallback } from "react";
-import Background from "@/components/pattern/Background";
+import Background from "@/components/patterns/Background";
 // import { ThemeDebug } from "@/components/ThemeDebug";
 
 // Keep splash screen visible while fonts load
