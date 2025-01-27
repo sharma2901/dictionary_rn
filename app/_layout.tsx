@@ -7,6 +7,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { useColorScheme } from "react-native";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { useCallback } from "react";
+import Background from "@/components/pattern/Background";
 // import { ThemeDebug } from "@/components/ThemeDebug";
 
 // Keep splash screen visible while fonts load
@@ -15,6 +16,7 @@ SplashScreen.preventAutoHideAsync();
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
   const isDark = colorScheme === "dark";
+  // const isDark = false;
 
   return (
     <SafeAreaProvider>
@@ -22,6 +24,7 @@ function RootLayoutNav() {
         <View className="flex-1 bg-base-100">
           <StatusBar style={isDark ? "light" : "dark"} />
           <SafeAreaView className="flex-1">
+            <Background />
             <Stack
               screenOptions={{
                 headerShown: false,
