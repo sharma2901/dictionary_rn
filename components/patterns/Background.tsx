@@ -78,7 +78,18 @@ const Background: React.FC = () => {
   };
 
   return (
-    <View className="absolute inset-0 -z-10">
+    <View
+      style={{
+        zIndex: -10,
+        backgroundColor: "transparent",
+        position: "absolute",
+        inset: 0,
+        left: 0,
+        top: 0,
+        right: 0,
+        bottom: 0,
+      }}
+    >
       {symbols.map((symbol, index) => (
         <View
           key={index}

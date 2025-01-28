@@ -80,7 +80,7 @@ export function ThemeProvider({
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <View
-        className={`flex-1 ${theme === "dark" ? "dark" : ""}`}
+        className={`flex-1 ${theme === "dark" ? "dark" : "light"}`}
         style={themes[theme]}
       >
         {children}

@@ -12,6 +12,8 @@ Code Style and Structure:
 - Clearly mention if newly installed packages needs to be linked and steps to perform that.
 - Give step by step clear instructions for the changes to be made.
 - Use Nativewind docs to learn more about it (https://www.nativewind.dev/).
+- Use expo router (File based) for routing work.
+- Use Development build for testing, debugging and developing the app.
 
 Naming Conventions:
 
@@ -51,3 +53,4 @@ Best Practices:
 - Utilize `expo-haptics` for haptic feedback on iOS.
 - Use `expo-constants` for accessing device information.
 - Implement `expo-linking` for deep linking and app navigation.
+- Properly analyze the codebase before resolving any issue or including any new features.

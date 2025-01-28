@@ -1,43 +1,41 @@
 import { Stack } from "expo-router";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import { View } from "react-native";
+import { Text, View } from "react-native";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useColorScheme } from "react-native";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { useCallback } from "react";
-import Background from "@/components/patterns/Background";
-// import { ThemeDebug } from "@/components/ThemeDebug";
-
+import { ThemeDebug } from "@/components/ThemeDebug";
+import "../global.css";
 // Keep splash screen visible while fonts load
+
 SplashScreen.preventAutoHideAsync();
+
+// Ensure that reloading on `/modal` keeps a back button present.
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
-  const isDark = colorScheme === "dark";
-  // const isDark = false;
-
+  // const isDark = colorScheme === "dark";
+  const isDark = true;
   return (
-    <SafeAreaProvider>
+    <SafeAreaView className="flex-1">
       <ThemeProvider theme={isDark ? "dark" : "light"}>
-        <View className="flex-1 bg-base-100">
+        <View className="flex-1">
           <StatusBar style={isDark ? "light" : "dark"} />
-          <SafeAreaView className="flex-1">
-            <Background />
-            <Stack
-              screenOptions={{
-                headerShown: false,
-                contentStyle: {
-                  backgroundColor: "transparent",
-                },
-              }}
-            />
-          </SafeAreaView>
-          {/* {__DEV__ && <ThemeDebug />} */}
+          <Stack
+            screenOptions={{
+              headerShown: false,
+              contentStyle: { backgroundColor: "transparent" },
+            }}
+          >
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          </Stack>
+          {__DEV__ && <ThemeDebug />}
         </View>
       </ThemeProvider>
-    </SafeAreaProvider>
+    </SafeAreaView>
   );
 }
 
