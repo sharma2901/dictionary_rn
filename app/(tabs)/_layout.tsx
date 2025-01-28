@@ -1,7 +1,7 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { Stack, Tabs } from "expo-router";
-import Background from "@/components/patterns/Background";
+import { Tabs } from "expo-router";
 import { View } from "react-native";
+
 export default function TabLayout() {
   return (
     <View className="flex-1">
@@ -11,6 +11,7 @@ export default function TabLayout() {
           headerShown: false,
           tabBarStyle: {
             backgroundColor: "#ffffff",
+            borderTopColor: "#e5e5e5",
           },
           tabBarActiveTintColor: "#F95428",
           tabBarInactiveTintColor: "#666666",

@@ -9,7 +9,7 @@ import { useMemo } from "react";
 const INCH_TO_PX = 160;
 const SYMBOL_SIZE = INCH_TO_PX * 0.3;
 const OPACITY = 0.25; // Translucency level
-const GRID_GAP = SYMBOL_SIZE * 1.5; // Space between symbols
+const GRID_GAP = SYMBOL_SIZE * 1.75; // Space between symbols
 
 interface Symbol {
   type: "swastika" | "om" | "hindi";
@@ -78,18 +78,7 @@ const Background: React.FC = () => {
   };
 
   return (
-    <View
-      style={{
-        zIndex: -10,
-        backgroundColor: "transparent",
-        position: "absolute",
-        inset: 0,
-        left: 0,
-        top: 0,
-        right: 0,
-        bottom: 0,
-      }}
-    >
+    <View className={`absolute inset-0 -z-10 left-0 top-0 right-0 bottom-0 `}>
       {symbols.map((symbol, index) => (
         <View
           key={index}
